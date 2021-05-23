@@ -1,0 +1,33 @@
+$highlight-color:#1890ff;
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+select,
+input {
+    width: 200px;
+    height: 32px;
+}
+
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover,
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover,
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title,
+.el-menu .el-menu-item.is-active,
+.el-menu--horizontal .el-menu .el-submenu.is-active>.el-submenu__title {
+    color: $highlight-color;
+    border-bottom-color: $highlight-color;
+}
+
+a {
+    color: #999;
+}
+
+.is-active {
+    a {
+        color: $highlight-color;
+    }
+}

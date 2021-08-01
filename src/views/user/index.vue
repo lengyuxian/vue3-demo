@@ -1,13 +1,16 @@
 <template>
   <div>
-  <button @click="click">click</button>
-    {{user}}
+    <button @click="click">
+      click
+    </button>
+    {{ user }}
   </div>
 </template>
 <script>
+import bus from '@/utils/bus';
 import {mapState,mapActions} from 'vuex'
 export default {
-  name:'userPage',
+  name:'UserPage',
   data(){
     return {
       data:[]
@@ -26,6 +29,8 @@ export default {
     click(){
       let aa=this.$store.state.user
       console.log(aa.userNo,this.user)
+      bus.$emit('busTest','test');
+      // this.$refs.menuHead.handleSelect()
     }
   },
   created(){
